@@ -3,6 +3,7 @@ import Alert from "./components/Alert";
 import Button from "./components/Button/Button";
 import ListGroup from "./components/ListGroup";
 import { BsFillCalendarFill } from "react-icons/bs";
+import { BsFillHeartFill } from "react-icons/bs";
 
 function App() {
   const [alertVisible, setAlertVisible] = useState(false);
@@ -19,7 +20,7 @@ function App() {
       </div>
 
       <div>
-        |<BsFillCalendarFill size={30} color="red" />|
+        <BsFillCalendarFill size={30} color="red" />
       </div>
 
       <div>
@@ -31,6 +32,14 @@ function App() {
         <Button color="success" onClick={() => setAlertVisible(!alertVisible)}>
           Click Me
         </Button>
+      </div>
+
+      <div>
+        <BsFillHeartFill
+          size={30}
+          color="pink"
+          onClick={() => console.log("Liked!")}
+        />
       </div>
     </>
   );
